@@ -19,11 +19,4 @@
   </node>
 
 
-  <node pkg="tf" type="tf_remap" name="tf_remapper">
-     <rosparam param="mappings">
-       - {old: "/rslidar",
-          new: "/lidar"}
-     </rosparam>
-   </node>
-
 </launch>
