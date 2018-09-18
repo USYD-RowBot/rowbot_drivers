@@ -4,11 +4,8 @@
     <!--param name="pcap" value="path_to_pcap"/-->
     <param name="device_ip" value="172.16.154.241"/>
     <!-- Set the Lidar data port on the PC side, default is 6699 -->
+    <param name="frame_id" value="lidar"/>
     <param name="port" value="6699"/>
-    <remap from="/rslidar_points" to="lidar/points"/>
-    <remap from="/rslidar_packets" to="lidar/packets"/>
-    <remap from="/rslidar_node/parameter_descriptions" to="lidar/paramater_descriptions"/>
-    <remap from="/rslidar_node/paramater_updates" to="lidar/parameter_updates"/>
   </node>
 
   <node  name="cloud_node" pkg="rslidar_pointcloud" type="cloud_node" output="screen" >
@@ -16,6 +13,8 @@
     <param name="curves_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/curves.csv" />
     <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/angle.csv" />
     <param name="channel_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/ChannelNum.csv" />
+    <remap from="/rslidar_points" to="lidar/points"/>
+
   </node>
 
 
