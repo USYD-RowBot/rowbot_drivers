@@ -8,7 +8,7 @@
     <param name="port" value="6699"/>
   </node>
 
-  <node  name="cloud_node" pkg="rslidar_pointcloud" type="cloud_node" output="screen" >
+  <node  name="cloud_node" pkg="rslidar_pointcloud" type="cloud_node">
     <param name="model" value="RS16"/>
     <param name="curves_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/curves.csv" />
     <param name="angle_path" value="$(find rslidar_pointcloud)/data/rs_lidar_16/angle.csv" />
